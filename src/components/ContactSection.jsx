@@ -67,16 +67,11 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                      Official Emails
+                      Official Email
                     </p>
-                    <div className="mt-0.5 space-y-1">
-                      <a href={`mailto:${SITE_CONFIG.email}`} className="block text-sm font-semibold text-[#0B1F3F] hover:text-[#C9A227] break-all">
-                        {SITE_CONFIG.email}
-                      </a>
-                      <a href={`mailto:${SITE_CONFIG.secondaryEmail}`} className="block text-sm font-semibold text-[#0B1F3F] hover:text-[#C9A227] break-all">
-                        {SITE_CONFIG.secondaryEmail}
-                      </a>
-                    </div>
+                    <a href={`mailto:${SITE_CONFIG.email}`} className="block text-sm font-semibold text-[#0B1F3F] hover:text-[#C9A227] break-all">
+                      {SITE_CONFIG.email}
+                    </a>
                   </div>
                 </div>
                 {/* Address */}

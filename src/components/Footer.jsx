@@ -147,18 +147,6 @@ export default function Footer() {
                   <FacebookIcon className="w-4 h-4" />
                 </a>
 
-                {/* X (Twitter) */}
-                <a
-                  href={SITE_CONFIG.socialLinks.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="X Twitter Profile"
-                  className="w-8 h-8 rounded bg-navy-800 text-slate-300 hover:bg-slate-700 hover:text-white flex items-center justify-center transition-colors"
-                  title="X (Twitter)"
-                >
-                  <TwitterXIcon className="w-4 h-4" />
-                </a>
-
                 {/* Email */}
                 <a
                   href={`mailto:${SITE_CONFIG.email}`}
@@ -293,12 +281,9 @@ export default function Footer() {
                 </div>
               </div>
               <div className="space-y-1 pt-1">
-                <span className="text-[11px] text-slate-400 block">Official Emails:</span>
+                <span className="text-[11px] text-slate-400 block">Official Email:</span>
                 <a href={`mailto:${SITE_CONFIG.email}`} className="block hover:text-white break-all text-xs text-slate-200">
                   ✉️ {SITE_CONFIG.email}
-                </a>
-                <a href={`mailto:${SITE_CONFIG.secondaryEmail}`} className="block hover:text-white break-all text-xs text-slate-200">
-                  ✉️ {SITE_CONFIG.secondaryEmail}
                 </a>
               </div>
             </div>

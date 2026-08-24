@@ -26,13 +26,8 @@ export const SITE_CONFIG = {
   shrutiPhone: "+91 9027407518",
   shrutiPhoneRaw: "9027407518",
 
-  // Email Addresses
+  // Email Address
   email: "shreejihrconsultancy1@gmail.com",
-  secondaryEmail: "shreejiconsultancy1@gmail.com",
-  emails: [
-    "shreejihrconsultancy1@gmail.com",
-    "shreejiconsultancy1@gmail.com"
-  ],
 
   // Office Location
   address: {
@@ -63,7 +58,7 @@ export const SITE_CONFIG = {
     // Official Instagram Profile
     instagram: "https://www.instagram.com/shreeji.hr?igsi=eDVjdGd6ZG1mbG84",
     twitter: "https://x.com/shreejihr",
-    facebook: "https://facebook.com/shreejihrconsultancy",
+    facebook: "https://www.facebook.com/share/1HasVa3nwY/",
     // Official LinkedIn Profile (Shruti Thakur)
     linkedin: "https://www.linkedin.com/in/shruti-thakur-3481262b2?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     linkedinShruti: "https://www.linkedin.com/in/shruti-thakur-3481262b2?utm_source=share_via&utm_content=profile&utm_medium=member_android",

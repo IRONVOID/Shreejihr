@@ -35,11 +35,11 @@ export default function Leadership() {
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center sm:items-start">
                   
                   {/* Full Portrait Photo Container */}
-                  <div className="sm:col-span-5 relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-900 flex-shrink-0">
+                  <div className="sm:col-span-5 relative w-full h-96 sm:h-[26rem] rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-900 flex-shrink-0">
                     <img
                       src={leader.image}
                       alt={`${leader.name} - ${leader.role} at Shree Ji HR Consultancy`}
-                      className="w-full h-full object-cover object-center"
+                      className="w-full h-full object-cover object-top"
                     />
                     <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-3 text-white sm:hidden">
                       <p className="font-bold text-base">{leader.name}</p>
