@@ -42,19 +42,10 @@ export default function ContactSection() {
                       <div>
                         <div className="flex items-center gap-1.5">
                           <span className="text-xs font-bold text-[#0B1F3F]">Khushi Tanwar</span>
-                          <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Direct HR Consultant</span>
+                          <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Direct HR Desk</span>
                         </div>
-                        <a href={`tel:${SITE_CONFIG.khushiPhoneRaw}`} className="block text-sm font-bold text-[#0B1F3F] hover:text-[#C9A227]">
+                        <a href={`tel:${SITE_CONFIG.khushiPhoneRaw}`} className="block text-sm font-bold text-[#0B1F3F] hover:text-[#C9A227] mt-0.5">
                           {SITE_CONFIG.khushiPhone}
-                        </a>
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-1.5">
-                          <span className="text-xs font-bold text-[#0B1F3F]">Shruti Thakur</span>
-                          <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-slate-100 text-slate-700">Founder & Owner</span>
-                        </div>
-                        <a href={`tel:${SITE_CONFIG.shrutiPhoneRaw}`} className="block text-sm font-semibold text-slate-700 hover:text-[#C9A227]">
-                          {SITE_CONFIG.shrutiPhone}
                         </a>
                       </div>
                     </div>

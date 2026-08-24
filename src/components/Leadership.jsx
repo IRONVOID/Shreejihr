@@ -102,7 +102,7 @@ export default function Leadership() {
                   <div className="flex items-center gap-1.5 text-slate-700 font-medium">
                     <ShieldCheck className="w-4 h-4 text-[#C9A227]" />
                     <span className="font-semibold text-slate-800">
-                      {leader.id === 'khushi-tanwar' ? SITE_CONFIG.khushiPhone : SITE_CONFIG.shrutiPhone}
+                      {SITE_CONFIG.khushiPhone}
                     </span>
                   </div>
 
@@ -120,8 +120,9 @@ export default function Leadership() {
                       </a>
                     )}
                     <a
-                      href={`tel:${leader.id === 'khushi-tanwar' ? SITE_CONFIG.khushiPhoneRaw : SITE_CONFIG.shrutiPhoneRaw}`}
+                      href={`tel:${SITE_CONFIG.khushiPhoneRaw}`}
                       className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-[#0B1F3F] font-bold text-xs transition-colors border border-slate-200"
+                      title={`Call HR Desk (${SITE_CONFIG.khushiPhone})`}
                     >
                       <Phone className="w-3 h-3 text-[#C9A227]" />
                       <span>Call</span>
@@ -149,7 +150,7 @@ export default function Leadership() {
               Have a strategic recruitment requirement for your business?
             </h4>
             <p className="text-slate-600 mt-0.5">
-              Connect directly with Khushi Tanwar ({SITE_CONFIG.khushiPhone}) or Shruti Thakur ({SITE_CONFIG.shrutiPhone}) for dedicated hiring support.
+              Connect directly with our HR Desk at {SITE_CONFIG.khushiPhone} (Khushi Tanwar) for dedicated hiring support.
             </p>
           </div>
 

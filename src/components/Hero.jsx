@@ -13,7 +13,7 @@ import {
   ExternalLink,
   Radio
 } from 'lucide-react';
-import { WhatsAppIcon } from './SocialIcons';
+import { WhatsAppIcon, LinkedInIcon } from './SocialIcons';
 import { SITE_CONFIG } from '../config/siteConfig';
 
 export default function Hero({ onSelectRole }) {
@@ -305,17 +305,22 @@ export default function Hero({ onSelectRole }) {
                 <div className="flex items-center justify-between pt-1.5 border-t border-slate-100">
                   <div>
                     <p className="font-bold text-[#0B1F3F]">Shruti Thakur <span className="text-[10px] font-normal text-slate-500">(Founder)</span></p>
-                    <a href={`tel:${SITE_CONFIG.shrutiPhoneRaw}`} className="text-slate-700 font-semibold hover:text-[#C9A227]">
-                      📞 {SITE_CONFIG.shrutiPhone}
+                    <span className="text-[11px] text-slate-600 font-medium">
+                      Executive Leadership
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <a
+                      href={SITE_CONFIG.socialLinks.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-2.5 py-1.5 bg-[#0A66C2] hover:bg-[#084e96] text-white rounded-md font-bold text-[11px] inline-flex items-center gap-1"
+                      title="Shruti Thakur on LinkedIn"
+                    >
+                      <LinkedInIcon className="w-3 h-3" />
+                      <span>LinkedIn</span>
                     </a>
                   </div>
-                  <a
-                    href={`tel:${SITE_CONFIG.shrutiPhoneRaw}`}
-                    className="px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-[#0B1F3F] rounded-md font-bold text-[11px] inline-flex items-center gap-1 border border-slate-200"
-                  >
-                    <Phone className="w-3 h-3 text-[#C9A227]" />
-                    <span>Call</span>
-                  </a>
                 </div>
               </div>
 

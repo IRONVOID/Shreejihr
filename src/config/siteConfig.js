@@ -15,16 +15,16 @@ export const SITE_CONFIG = {
   establishment: "Udyam Registered MSME Enterprise",
   govtRegistrationText: "Officially registered under Ministry of MSME, Govt. of India",
 
-  // Contact Numbers (Khushi Tanwar & Shruti Thakur)
+  // Contact Number (Khushi Tanwar - Direct HR Desk)
   primaryPhone: "+91 9690423313", // Khushi Tanwar (HR Consultant / Co-Founder - Direct Contact)
-  secondaryPhone: "+91 9027407518", // Shruti Thakur (Founder & Owner)
+  secondaryPhone: "+91 9690423313", // Active HR Helpline
   primaryPhoneRaw: "9690423313",
-  secondaryPhoneRaw: "9027407518",
+  secondaryPhoneRaw: "9690423313",
 
   khushiPhone: "+91 9690423313",
   khushiPhoneRaw: "9690423313",
-  shrutiPhone: "+91 9027407518",
-  shrutiPhoneRaw: "9027407518",
+  shrutiPhone: "+91 9690423313",
+  shrutiPhoneRaw: "9690423313",
 
   // Email Address
   email: "shreejihrconsultancy1@gmail.com",

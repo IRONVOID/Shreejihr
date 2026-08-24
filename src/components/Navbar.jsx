@@ -60,18 +60,12 @@ export default function Navbar() {
 
           <div className="flex items-center gap-5">
             <a 
-              href={`tel:${SITE_CONFIG.primaryPhoneRaw}`} 
+              href={`tel:${SITE_CONFIG.khushiPhoneRaw}`} 
               className="flex items-center gap-1.5 hover:text-gold-400 transition-colors"
+              title="Call HR Desk (Khushi Tanwar)"
             >
               <Phone className="w-3.5 h-3.5 text-gold-400" />
-              <span>{SITE_CONFIG.primaryPhone}</span>
-            </a>
-            <a 
-              href={`tel:${SITE_CONFIG.secondaryPhoneRaw}`} 
-              className="flex items-center gap-1.5 hover:text-gold-400 transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-gold-400" />
-              <span>{SITE_CONFIG.secondaryPhone}</span>
+              <span>HR Desk: {SITE_CONFIG.khushiPhone}</span>
             </a>
             <a 
               href={`mailto:${SITE_CONFIG.email}`} 
@@ -287,24 +281,16 @@ export default function Navbar() {
                   </a>
                 </div>
 
-                {/* Direct Call Cards */}
-                <div className="grid grid-cols-2 gap-2 pt-1">
+                {/* Direct Call Card */}
+                <div className="pt-1">
                   <a
                     href={`tel:${SITE_CONFIG.khushiPhoneRaw}`}
-                    className="flex flex-col items-center justify-center py-2.5 px-2 rounded-xl bg-slate-50 text-slate-900 border border-slate-200 min-h-[48px] shadow-xs active:bg-slate-100"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex flex-col items-center justify-center py-2.5 px-3 rounded-xl bg-slate-50 text-slate-900 border border-slate-200 min-h-[48px] shadow-xs active:bg-slate-100"
                   >
-                    <span className="text-[10px] text-slate-500 font-medium">Khushi (HR Consultant)</span>
-                    <span className="text-xs font-extrabold text-[#0B1F3F] flex items-center gap-1">
-                      <Phone className="w-3 h-3 text-[#C9A227]" /> {SITE_CONFIG.khushiPhoneRaw}
-                    </span>
-                  </a>
-                  <a
-                    href={`tel:${SITE_CONFIG.shrutiPhoneRaw}`}
-                    className="flex flex-col items-center justify-center py-2.5 px-2 rounded-xl bg-slate-50 text-slate-900 border border-slate-200 min-h-[48px] shadow-xs active:bg-slate-100"
-                  >
-                    <span className="text-[10px] text-slate-500 font-medium">Shruti (Founder)</span>
-                    <span className="text-xs font-extrabold text-[#0B1F3F] flex items-center gap-1">
-                      <Phone className="w-3 h-3 text-[#C9A227]" /> {SITE_CONFIG.shrutiPhoneRaw}
+                    <span className="text-[10px] text-slate-500 font-medium">Direct HR Desk (Khushi Tanwar)</span>
+                    <span className="text-xs font-extrabold text-[#0B1F3F] flex items-center gap-1.5 mt-0.5">
+                      <Phone className="w-3.5 h-3.5 text-[#C9A227]" /> {SITE_CONFIG.khushiPhone}
                     </span>
                   </a>
                 </div>

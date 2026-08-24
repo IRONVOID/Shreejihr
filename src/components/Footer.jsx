@@ -268,15 +268,9 @@ export default function Footer() {
               </a>
               <div className="space-y-1.5">
                 <div>
-                  <span className="text-[11px] text-slate-400 block">Khushi Tanwar (HR Consultant):</span>
-                  <a href={`tel:${SITE_CONFIG.khushiPhoneRaw}`} className="hover:text-white font-bold text-slate-200">
-                    {SITE_CONFIG.khushiPhone}
-                  </a>
-                </div>
-                <div>
-                  <span className="text-[11px] text-slate-400 block">Shruti Thakur (Founder):</span>
-                  <a href={`tel:${SITE_CONFIG.shrutiPhoneRaw}`} className="hover:text-white font-semibold text-slate-300">
-                    {SITE_CONFIG.shrutiPhone}
+                  <span className="text-[11px] text-slate-400 block">Direct HR Consultant:</span>
+                  <a href={`tel:${SITE_CONFIG.khushiPhoneRaw}`} className="hover:text-white font-bold text-slate-200 block mt-0.5">
+                    📞 {SITE_CONFIG.khushiPhone} (Khushi Tanwar)
                   </a>
                 </div>
               </div>
