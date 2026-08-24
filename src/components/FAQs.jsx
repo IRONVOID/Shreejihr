@@ -7,7 +7,7 @@ export default function FAQs() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section className="py-16 lg:py-24 bg-[#F3EDE0] border-b border-[#E5DAC4]">
+    <section className="py-16 lg:py-24 bg-slate-50/70 border-b border-slate-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -30,7 +30,7 @@ export default function FAQs() {
             return (
               <div
                 key={idx}
-                className="bg-white border border-[#E5DAC4] rounded-lg overflow-hidden transition-colors shadow-xs"
+                className="bg-white border border-slate-200 rounded-lg overflow-hidden transition-colors shadow-xs"
               >
                 <button
                   type="button"
@@ -47,7 +47,7 @@ export default function FAQs() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 sm:px-5 pb-5 pt-1 border-t border-[#E5DAC4] text-xs sm:text-sm text-slate-700 leading-relaxed bg-[#FAF6EE]">
+                  <div className="px-4 sm:px-5 pb-5 pt-1 border-t border-slate-100 text-xs sm:text-sm text-slate-700 leading-relaxed bg-slate-50">
                     {faq.a}
                   </div>
                 )}
@@ -57,7 +57,7 @@ export default function FAQs() {
         </div>
 
         {/* Quick Help Strip */}
-        <div className="mt-8 p-4 rounded-lg bg-white border border-[#E5DAC4] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+        <div className="mt-8 p-4 rounded-lg bg-white border border-slate-200 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-2 text-slate-700">
             <HelpCircle className="w-4 h-4 text-[#C9A227]" />
             <span>Have a specific hiring requirement not covered above?</span>

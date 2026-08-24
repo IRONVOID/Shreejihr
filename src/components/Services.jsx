@@ -35,7 +35,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-[#F3EDE0] border-b border-[#E5DAC4]">
+    <section id="services" className="py-16 lg:py-24 bg-slate-50/70 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -59,19 +59,19 @@ export default function Services() {
             return (
               <div
                 key={service.num}
-                className="bg-white rounded-lg p-5 border border-[#E5DAC4] hover:border-[#C9A227] transition-colors flex flex-col justify-between shadow-xs"
+                className="bg-white rounded-lg p-5 border border-slate-200 hover:border-[#C9A227] transition-colors flex flex-col justify-between shadow-xs"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded bg-[#FAF6EE] border border-[#E5DAC4] text-[#0B1F3F] flex items-center justify-center">
+                      <div className="w-8 h-8 rounded bg-slate-100 border border-slate-200 text-[#0B1F3F] flex items-center justify-center">
                         <IconComp className="w-4 h-4 text-[#0B1F3F]" />
                       </div>
                       <span className="text-xs font-mono font-bold text-slate-400">
                         {service.num}.
                       </span>
                     </div>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider text-slate-700 bg-[#FAF6EE] border border-[#E5DAC4]">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider text-slate-700 bg-slate-50 border border-slate-200">
                       {service.badge || service.type}
                     </span>
                   </div>
@@ -86,7 +86,7 @@ export default function Services() {
                   </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-[#E5DAC4]/50 flex items-center justify-between text-xs">
+                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
                   <span className="text-slate-500 font-medium">100% Pre-Screened</span>
                   <a
                     href="#contact"

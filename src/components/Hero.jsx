@@ -20,7 +20,7 @@ export default function Hero({ onSelectRole }) {
   const [userRole, setUserRole] = useState('employer'); // 'employer' | 'jobseeker'
 
   return (
-    <section className="relative pt-24 sm:pt-28 md:pt-32 pb-14 bg-[#FAF2D6] border-b border-[#DFBF74] overflow-hidden">
+    <section className="relative pt-24 sm:pt-28 md:pt-32 pb-14 bg-white border-b border-slate-200 overflow-hidden">
 
       {/* Mild Corporate Background Pattern */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -29,9 +29,9 @@ export default function Hero({ onSelectRole }) {
         {/* Top-left navy glow */}
         <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#0B1F3F] opacity-[0.03] blur-3xl" />
         {/* Bottom-right gold accent */}
-        <div className="absolute -bottom-20 right-0 w-80 h-80 rounded-full bg-[#C9A227] opacity-[0.08] blur-3xl" />
+        <div className="absolute -bottom-20 right-0 w-80 h-80 rounded-full bg-[#C9A227] opacity-[0.06] blur-3xl" />
         {/* Thin diagonal lines overlay — very subtle */}
-        <svg className="absolute inset-0 w-full h-full opacity-[0.025]" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute inset-0 w-full h-full opacity-[0.02]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="hero-lines" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
               <path d="M0 60L60 0" stroke="#0B1F3F" strokeWidth="1" fill="none" />
@@ -51,7 +51,7 @@ export default function Hero({ onSelectRole }) {
           <div className="lg:col-span-7 space-y-5">
 
             {/* Government Accreditation Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white border border-[#DFBF74] text-[#0B1F3F] text-xs font-semibold shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-50 border border-slate-200 text-[#0B1F3F] text-xs font-semibold shadow-xs">
               <ShieldCheck className="w-4 h-4 text-[#C9A227]" />
               <span>Govt. of India Recognized • MSME Udyam Certified Enterprise</span>
             </div>
@@ -72,15 +72,15 @@ export default function Hero({ onSelectRole }) {
             </p>
 
             {/* Quick Sourcing / Application Interactive Box (Employer vs Job Seeker) */}
-            <div className="bg-white rounded-xl border border-[#DFBF74] p-3.5 sm:p-5 shadow-xs space-y-3">
+            <div className="bg-slate-50/70 rounded-xl border border-slate-200 p-3.5 sm:p-5 shadow-xs space-y-3">
 
-              <div className="grid grid-cols-2 gap-1.5 sm:flex sm:items-center sm:gap-2 border-b border-[#DFBF74]/60 pb-3">
+              <div className="grid grid-cols-2 gap-1.5 sm:flex sm:items-center sm:gap-2 border-b border-slate-200 pb-3">
                 <button
                   type="button"
                   onClick={() => setUserRole('employer')}
                   className={`px-2.5 py-2 rounded-lg text-xs font-bold transition-all text-center flex items-center justify-center min-h-[38px] ${userRole === 'employer'
                     ? 'bg-[#0B1F3F] text-white shadow-xs'
-                    : 'bg-[#F4E7BD] text-slate-800 hover:bg-[#DFBF74]'
+                    : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
                     }`}
                 >
                   🏢 Employers (Hire)
@@ -90,7 +90,7 @@ export default function Hero({ onSelectRole }) {
                   onClick={() => setUserRole('jobseeker')}
                   className={`px-2.5 py-2 rounded-lg text-xs font-bold transition-all text-center flex items-center justify-center min-h-[38px] ${userRole === 'jobseeker'
                     ? 'bg-[#0B1F3F] text-white shadow-xs'
-                    : 'bg-[#F4E7BD] text-slate-800 hover:bg-[#DFBF74]'
+                    : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
                     }`}
                 >
                   👤 Job Seekers (Apply)
@@ -104,12 +104,14 @@ export default function Hero({ onSelectRole }) {
                   </p>
                   <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                     <a
-                      href="#contact"
-                      onClick={() => onSelectRole && onSelectRole('General Hiring Requirement')}
+                      href={SITE_CONFIG.forms.recruiterForm}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#0B1F3F] hover:bg-[#122C54] active:scale-[0.98] text-white font-bold text-xs sm:text-sm transition-all min-h-[44px] shadow-sm"
                     >
                       <Briefcase className="w-4 h-4 text-[#C9A227]" />
-                      <span>Post a Hiring Requirement</span>
+                      <span>Post Hiring Requirement</span>
+                      <ExternalLink className="w-3 h-3 text-slate-300" />
                     </a>
                     <a
                       href={`tel:${SITE_CONFIG.khushiPhoneRaw}`}
@@ -127,11 +129,14 @@ export default function Hero({ onSelectRole }) {
                   </p>
                   <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                     <a
-                      href="#positions"
+                      href={SITE_CONFIG.forms.candidateForm}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#0B1F3F] hover:bg-[#122C54] active:scale-[0.98] text-white font-bold text-xs sm:text-sm transition-all min-h-[44px] shadow-sm"
                     >
-                      <Search className="w-4 h-4 text-[#C9A227]" />
-                      <span>Browse 16+ Active Roles</span>
+                      <FileText className="w-4 h-4 text-[#C9A227]" />
+                      <span>Fill Candidate Form</span>
+                      <ExternalLink className="w-3 h-3 text-slate-300" />
                     </a>
                     <a
                       href={SITE_CONFIG.socialLinks.whatsappKhushi}
@@ -166,38 +171,38 @@ export default function Hero({ onSelectRole }) {
               </span>
             </div>
 
-            {/* Quick Action Links: Brochure, Recruiter Form, Client Form & WhatsApp Channel */}
+            {/* Quick Action Links: Brochure, Candidate Form, Client Form & WhatsApp Channel */}
             <div className="pt-2 flex flex-wrap items-center gap-2.5">
               <a
                 href="/shree-ji-hr-brochure.pdf"
                 download="Shree-Ji-HR-Consultancy-Brochure.pdf"
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-[#DFBF74] text-[#0B1F3F] font-bold text-xs hover:bg-[#C9A227] hover:text-white transition-all duration-200 group"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-[#0B1F3F] font-bold text-xs hover:bg-slate-50 transition-all duration-200 group shadow-2xs"
               >
-                <Download className="w-3.5 h-3.5 text-[#C9A227] group-hover:text-white" />
+                <Download className="w-3.5 h-3.5 text-[#C9A227]" />
                 <span>Download Brochure</span>
-                <span className="px-1.5 py-0.5 rounded bg-[#FAF2D6] text-[10px] text-[#0B1F3F]">PDF</span>
+                <span className="px-1.5 py-0.5 rounded bg-slate-100 text-[10px] text-[#0B1F3F]">PDF</span>
+              </a>
+
+              <a
+                href={SITE_CONFIG.forms.candidateForm}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#0B1F3F] hover:bg-[#122C54] text-white font-bold text-xs transition-colors shadow-sm"
+              >
+                <FileText className="w-3.5 h-3.5 text-[#C9A227]" />
+                <span>Candidate Form</span>
+                <ExternalLink className="w-3 h-3 text-slate-300" />
               </a>
 
               <a
                 href={SITE_CONFIG.forms.recruiterForm}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#0B1F3F] hover:bg-[#122C54] text-white font-bold text-xs transition-colors shadow-sm"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#C9A227] hover:bg-[#B08B1E] text-[#0B1F3F] font-bold text-xs transition-colors shadow-sm"
               >
-                <FileText className="w-3.5 h-3.5 text-[#C9A227]" />
-                <span>Recruiter Form</span>
-                <ExternalLink className="w-3 h-3 text-slate-300" />
-              </a>
-
-              <a
-                href={SITE_CONFIG.forms.clientForm}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#0B1F3F] hover:bg-[#122C54] text-white font-bold text-xs transition-colors shadow-sm"
-              >
-                <Building2 className="w-3.5 h-3.5 text-[#C9A227]" />
+                <Building2 className="w-3.5 h-3.5 text-[#0B1F3F]" />
                 <span>Client Form</span>
-                <ExternalLink className="w-3 h-3 text-slate-300" />
+                <ExternalLink className="w-3 h-3 text-[#0B1F3F]" />
               </a>
 
               <a
@@ -218,7 +223,7 @@ export default function Hero({ onSelectRole }) {
           <div className="lg:col-span-5 space-y-4">
 
             {/* Handshake Hero Image Card with floating trust badges */}
-            <div className="relative rounded-2xl overflow-hidden shadow-lg border border-[#DFBF74] group">
+            <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 group">
 
               {/* Main Handshake Image */}
               <img
@@ -237,7 +242,7 @@ export default function Hero({ onSelectRole }) {
               </div>
 
               {/* Top-left: Brand emblem */}
-              <div className="absolute top-3 left-3 flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 border border-[#DFBF74] shadow-sm">
+              <div className="absolute top-3 left-3 flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 border border-slate-200 shadow-sm">
                 <div className="w-6 h-6 shrink-0">
                   <img src="/shree-ji-logo-full.jpg" alt="Shree Ji HR" className="w-full h-full object-contain" />
                 </div>
@@ -257,23 +262,23 @@ export default function Hero({ onSelectRole }) {
 
             {/* Trust KPI Badges Row */}
             <div className="grid grid-cols-3 gap-2">
-              <div className="bg-white rounded-xl border border-[#DFBF74] p-3 text-center shadow-xs">
+              <div className="bg-white rounded-xl border border-slate-200 p-3 text-center shadow-xs">
                 <p className="text-lg font-bold text-[#0B1F3F]">24-48h</p>
                 <p className="text-[10px] text-slate-500 font-medium mt-0.5">Resume Delivery</p>
               </div>
-              <div className="bg-white rounded-xl border border-[#DFBF74] p-3 text-center shadow-xs">
+              <div className="bg-white rounded-xl border border-slate-200 p-3 text-center shadow-xs">
                 <p className="text-lg font-bold text-[#0B1F3F]">100%</p>
                 <p className="text-[10px] text-slate-500 font-medium mt-0.5">Pre-Vetted Talent</p>
               </div>
-              <div className="bg-white rounded-xl border border-[#DFBF74] p-3 text-center shadow-xs">
+              <div className="bg-white rounded-xl border border-slate-200 p-3 text-center shadow-xs">
                 <p className="text-lg font-bold text-[#C9A227]">₹0</p>
                 <p className="text-[10px] text-slate-500 font-medium mt-0.5">Upfront Retainer</p>
               </div>
             </div>
 
             {/* Quick Contact Numbers Banner */}
-            <div className="p-4 rounded-xl bg-white border border-[#DFBF74] shadow-xs space-y-3 text-xs">
-              <div className="flex items-center justify-between border-b border-[#DFBF74]/60 pb-2">
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs space-y-3 text-xs">
+              <div className="flex items-center justify-between border-b border-slate-200 pb-2">
                 <span className="font-bold text-[#0B1F3F]">Direct Recruitment Desks</span>
                 <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700">Online</span>
               </div>
@@ -297,7 +302,7 @@ export default function Hero({ onSelectRole }) {
                   </a>
                 </div>
 
-                <div className="flex items-center justify-between pt-1.5 border-t border-[#DFBF74]/40">
+                <div className="flex items-center justify-between pt-1.5 border-t border-slate-100">
                   <div>
                     <p className="font-bold text-[#0B1F3F]">Shruti Thakur <span className="text-[10px] font-normal text-slate-500">(Founder)</span></p>
                     <a href={`tel:${SITE_CONFIG.shrutiPhoneRaw}`} className="text-slate-700 font-semibold hover:text-[#C9A227]">
@@ -306,7 +311,7 @@ export default function Hero({ onSelectRole }) {
                   </div>
                   <a
                     href={`tel:${SITE_CONFIG.shrutiPhoneRaw}`}
-                    className="px-2.5 py-1.5 bg-[#F4E7BD] hover:bg-[#DFBF74] text-[#0B1F3F] rounded-md font-bold text-[11px] inline-flex items-center gap-1 border border-[#DFBF74]"
+                    className="px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-[#0B1F3F] rounded-md font-bold text-[11px] inline-flex items-center gap-1 border border-slate-200"
                   >
                     <Phone className="w-3 h-3 text-[#C9A227]" />
                     <span>Call</span>
@@ -314,7 +319,7 @@ export default function Hero({ onSelectRole }) {
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-[#DFBF74]/60">
+              <div className="pt-2 border-t border-slate-200">
                 <a
                   href={SITE_CONFIG.socialLinks.whatsappChannel}
                   target="_blank"

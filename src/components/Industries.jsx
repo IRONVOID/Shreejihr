@@ -23,7 +23,7 @@ export default function Industries() {
   };
 
   return (
-    <section id="industries" className="py-16 lg:py-24 bg-[#FAF2D6] border-b border-[#DFBF74]">
+    <section id="industries" className="py-16 lg:py-24 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -46,7 +46,7 @@ export default function Industries() {
             return (
               <div
                 key={ind.id}
-                className="bg-white rounded-lg p-5 border border-[#DFBF74] hover:border-[#C9A227] transition-colors flex flex-col justify-between shadow-xs"
+                className="bg-white rounded-lg p-5 border border-slate-200 hover:border-[#C9A227] transition-colors flex flex-col justify-between shadow-xs"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
@@ -68,7 +68,7 @@ export default function Industries() {
                   </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-[#DFBF74]/60">
+                <div className="mt-4 pt-3 border-t border-slate-100">
                   <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
                     Key Roles:
                   </p>

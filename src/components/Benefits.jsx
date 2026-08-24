@@ -24,7 +24,7 @@ export default function Benefits() {
   };
 
   return (
-    <section id="benefits" className="py-16 lg:py-24 bg-[#FAF6EE] border-b border-[#E5DAC4]">
+    <section id="benefits" className="py-16 lg:py-24 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -48,14 +48,14 @@ export default function Benefits() {
             return (
               <div
                 key={benefit.id}
-                className="rounded-xl p-5 border bg-white text-slate-900 border-[#E5DAC4] shadow-xs hover:border-[#0B1F3F]/30 hover:shadow-sm transition-all flex flex-col justify-between"
+                className="rounded-xl p-5 border bg-white text-slate-900 border-slate-200 shadow-xs hover:border-[#0B1F3F]/30 hover:shadow-sm transition-all flex flex-col justify-between"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <div className="w-8 h-8 rounded-lg bg-[#FAF6EE] border border-[#E5DAC4] flex items-center justify-center text-[#0B1F3F]">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-[#0B1F3F]">
                       <IconComp className="w-4 h-4 text-[#C9A227]" />
                     </div>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-[#FAF6EE] text-slate-700 border border-[#E5DAC4]">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-slate-50 text-slate-700 border border-slate-200">
                       {benefit.metric}
                     </span>
                   </div>
@@ -75,7 +75,7 @@ export default function Benefits() {
         </div>
 
         {/* Action strip */}
-        <div className="mt-10 p-5 rounded-lg bg-white border border-[#E5DAC4] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 p-5 rounded-lg bg-slate-50/70 border border-slate-200 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <h4 className="text-sm font-bold text-[#0B1F3F]">
               Looking for a custom recruitment proposal for your team?

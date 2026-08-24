@@ -1,12 +1,12 @@
 import React from 'react';
 import { Quote, Award, ShieldCheck, CheckCircle2, Phone } from 'lucide-react';
-import { WhatsAppIcon } from './SocialIcons';
+import { WhatsAppIcon, LinkedInIcon } from './SocialIcons';
 import { LEADERSHIP_MEMBERS } from '../data/hrData';
 import { SITE_CONFIG } from '../config/siteConfig';
 
 export default function Leadership() {
   return (
-    <section id="leadership" className="py-16 lg:py-24 bg-[#FAF2D6] border-b border-[#DFBF74]">
+    <section id="leadership" className="py-16 lg:py-24 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -27,7 +27,7 @@ export default function Leadership() {
           {LEADERSHIP_MEMBERS.map((leader) => (
             <div
               key={leader.id}
-              className="bg-white rounded-2xl border border-[#DFBF74] overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
+              className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
             >
               <div className="p-6 sm:p-7 space-y-5">
                 
@@ -35,7 +35,7 @@ export default function Leadership() {
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center sm:items-start">
                   
                   {/* Full Portrait Photo Container */}
-                  <div className="sm:col-span-5 relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-[#DFBF74] shadow-sm bg-slate-900 flex-shrink-0">
+                  <div className="sm:col-span-5 relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-900 flex-shrink-0">
                     <img
                       src={leader.image}
                       alt={`${leader.name} - ${leader.role} at Shree Ji HR Consultancy`}
@@ -49,7 +49,7 @@ export default function Leadership() {
 
                   {/* Info & Badges */}
                   <div className="sm:col-span-7 space-y-3">
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#FAF2D6] border border-[#DFBF74] text-[#0B1F3F] text-xs font-bold shadow-2xs">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-[#0B1F3F] text-xs font-bold shadow-2xs">
                       <Award className="w-3.5 h-3.5 text-[#C9A227]" />
                       <span>{leader.badge}</span>
                     </div>
@@ -75,7 +75,7 @@ export default function Leadership() {
                         {leader.highlights.map((item, idx) => (
                           <span
                             key={idx}
-                            className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-800 bg-[#FAF2D6] border border-[#DFBF74] px-2.5 py-1 rounded-md"
+                            className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-800 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md"
                           >
                             <CheckCircle2 className="w-3 h-3 text-emerald-600" />
                             <span>{item}</span>
@@ -85,7 +85,7 @@ export default function Leadership() {
                     </div>
 
                     {/* Quote / Testimonial Box Inside Column for Desktop */}
-                    <div className="relative bg-[#FAF2D6] rounded-xl p-4 border border-[#DFBF74] shadow-2xs space-y-1.5 mt-2">
+                    <div className="relative bg-slate-50 rounded-xl p-4 border border-slate-200 shadow-2xs space-y-1.5 mt-2">
                       <Quote className="w-5 h-5 text-[#C9A227]/40 absolute top-2.5 right-2.5" />
                       <p className="text-xs text-slate-700 leading-relaxed font-normal italic relative z-10">
                         "{leader.quote}"
@@ -98,7 +98,7 @@ export default function Leadership() {
               </div>
 
                 {/* Card Footer Bar with Direct Contact Actions */}
-                <div className="p-4 bg-[#FAF2D6] border-t border-[#DFBF74] flex flex-wrap items-center justify-between gap-3 text-xs">
+                <div className="p-4 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
                   <div className="flex items-center gap-1.5 text-slate-700 font-medium">
                     <ShieldCheck className="w-4 h-4 text-[#C9A227]" />
                     <span className="font-semibold text-slate-800">
@@ -107,9 +107,21 @@ export default function Leadership() {
                   </div>
 
                   <div className="flex items-center gap-2">
+                    {leader.id === 'shruti-thakur' && (
+                      <a
+                        href={SITE_CONFIG.socialLinks.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold text-xs transition-colors"
+                        title="Connect with Shruti Thakur on LinkedIn"
+                      >
+                        <LinkedInIcon className="w-3.5 h-3.5" />
+                        <span>LinkedIn</span>
+                      </a>
+                    )}
                     <a
                       href={`tel:${leader.id === 'khushi-tanwar' ? SITE_CONFIG.khushiPhoneRaw : SITE_CONFIG.shrutiPhoneRaw}`}
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white hover:bg-[#F4E7BD] text-[#0B1F3F] font-bold text-xs transition-colors border border-[#DFBF74]"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-[#0B1F3F] font-bold text-xs transition-colors border border-slate-200"
                     >
                       <Phone className="w-3 h-3 text-[#C9A227]" />
                       <span>Call</span>
@@ -131,7 +143,7 @@ export default function Leadership() {
         </div>
 
         {/* Bottom Trust Action Box */}
-        <div className="mt-10 p-5 rounded-xl bg-white border border-[#DFBF74] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <div className="mt-10 p-5 rounded-xl bg-slate-50/70 border border-slate-200 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <div>
             <h4 className="text-sm font-bold text-[#0B1F3F]">
               Have a strategic recruitment requirement for your business?

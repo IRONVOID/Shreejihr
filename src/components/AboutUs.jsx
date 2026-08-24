@@ -11,7 +11,7 @@ import { SITE_CONFIG } from '../config/siteConfig';
 
 export default function AboutUs() {
   return (
-    <section id="about" className="py-16 lg:py-24 bg-[#F4E7BD] border-b border-[#DFBF74]">
+    <section id="about" className="py-16 lg:py-24 bg-slate-50/70 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -32,7 +32,7 @@ export default function AboutUs() {
           
           <div className="lg:col-span-8 space-y-4">
             {ABOUT_DATA.mainText.map((paragraph, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-4 rounded-lg bg-white border border-[#DFBF74] shadow-xs">
+              <div key={idx} className="flex items-start gap-3 p-4 rounded-lg bg-white border border-slate-200 shadow-xs">
                 <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#0B1F3F]/10 flex items-center justify-center text-[#0B1F3F]">
                   <CheckCircle className="w-3.5 h-3.5" />
                 </div>
@@ -63,8 +63,8 @@ export default function AboutUs() {
           </div>
 
           {/* Quick Highlight Box */}
-          <div className="lg:col-span-4 bg-white rounded-xl p-6 border border-[#DFBF74] space-y-4 shadow-xs">
-            <div className="flex items-center gap-3 pb-3 border-b border-[#DFBF74]">
+          <div className="lg:col-span-4 bg-white rounded-xl p-6 border border-slate-200 space-y-4 shadow-xs">
+            <div className="flex items-center gap-3 pb-3 border-b border-slate-200">
               <ShieldCheck className="w-6 h-6 text-[#C9A227]" />
               <div>
                 <h3 className="font-bold text-sm text-[#0B1F3F]">MSME Udyam Certified</h3>
@@ -73,15 +73,15 @@ export default function AboutUs() {
             </div>
 
             <div className="space-y-2 text-xs text-slate-600">
-              <div className="flex justify-between py-1 border-b border-[#DFBF74]/50">
+              <div className="flex justify-between py-1 border-b border-slate-100">
                 <span className="font-semibold text-slate-700">Turnaround Time</span>
                 <span className="text-[#0B1F3F] font-bold">24 – 48 Hours</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#DFBF74]/50">
+              <div className="flex justify-between py-1 border-b border-slate-100">
                 <span className="font-semibold text-slate-700">Commercials</span>
                 <span className="text-[#0B1F3F] font-bold">No Upfront Fees</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#DFBF74]/50">
+              <div className="flex justify-between py-1 border-b border-slate-100">
                 <span className="font-semibold text-slate-700">Hiring Scope</span>
                 <span className="text-[#0B1F3F] font-bold">Local & Pan-India</span>
               </div>
@@ -98,7 +98,7 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           {/* Mission */}
-          <div className="bg-white rounded-xl p-6 border border-[#DFBF74] space-y-3 shadow-xs">
+          <div className="bg-white rounded-xl p-6 border border-slate-200 space-y-3 shadow-xs">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-[#0B1F3F] text-white flex items-center justify-center">
                 <Target className="w-5 h-5 text-[#C9A227]" />
@@ -114,7 +114,7 @@ export default function AboutUs() {
           </div>
 
           {/* Vision */}
-          <div className="bg-white rounded-xl p-6 border border-[#DFBF74] space-y-3 shadow-xs">
+          <div className="bg-white rounded-xl p-6 border border-slate-200 space-y-3 shadow-xs">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-[#0B1F3F] text-white flex items-center justify-center">
                 <Eye className="w-5 h-5 text-[#C9A227]" />

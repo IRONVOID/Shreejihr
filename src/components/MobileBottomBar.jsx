@@ -14,10 +14,10 @@ export default function MobileBottomBar() {
           className="flex flex-col items-center justify-center py-1 px-1 rounded-lg text-slate-200 hover:text-white active:bg-white/10 transition-colors"
           title={`Call HR Desk (${SITE_CONFIG.khushiPhone})`}
         >
-          <div className="w-8 h-8 rounded-full bg-[#FAF2D6] text-[#0B1F3F] flex items-center justify-center shadow-xs">
+          <div className="w-8 h-8 rounded-full bg-white text-[#0B1F3F] flex items-center justify-center shadow-xs">
             <Phone className="w-4 h-4 text-[#C9A227]" />
           </div>
-          <span className="text-[10px] font-bold mt-1 text-[#FAF2D6]">Call Desk</span>
+          <span className="text-[10px] font-bold mt-1 text-slate-200">Call Desk</span>
         </a>
 
         {/* 2. Direct WhatsApp Chat */}

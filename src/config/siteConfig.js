@@ -26,8 +26,13 @@ export const SITE_CONFIG = {
   shrutiPhone: "+91 9027407518",
   shrutiPhoneRaw: "9027407518",
 
-  // Email
+  // Email Addresses
   email: "shreejihrconsultancy1@gmail.com",
+  secondaryEmail: "shreejiconsultancy1@gmail.com",
+  emails: [
+    "shreejihrconsultancy1@gmail.com",
+    "shreejiconsultancy1@gmail.com"
+  ],
 
   // Office Location
   address: {
@@ -55,16 +60,25 @@ export const SITE_CONFIG = {
     // Official WhatsApp Channel of Shree Ji HR Consultancy
     whatsappChannel: "https://whatsapp.com/channel/0029Vb7fdEBBA1ewOErO7O3J",
 
-    instagram: "https://instagram.com/YOUR_HANDLE", // Replace with your Instagram URL
-    twitter: "https://x.com/YOUR_HANDLE",           // Replace with your X (Twitter) URL
-    facebook: "https://facebook.com/YOUR_PAGE",      // Replace with your Facebook Page URL
-    linkedin: "https://linkedin.com/company/YOUR_PAGE", // Replace with your LinkedIn URL
+    // Official Instagram Profile
+    instagram: "https://www.instagram.com/shreeji.hr?igsi=eDVjdGd6ZG1mbG84",
+    twitter: "https://x.com/shreejihr",
+    facebook: "https://facebook.com/shreejihrconsultancy",
+    // Official LinkedIn Profile (Shruti Thakur)
+    linkedin: "https://www.linkedin.com/in/shruti-thakur-3481262b2?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    linkedinShruti: "https://www.linkedin.com/in/shruti-thakur-3481262b2?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
 
   // Online Forms
   forms: {
+    // 1. Candidate / Job Seeker Application Form
+    candidateForm: "https://docs.google.com/forms/d/e/1FAIpQLSd9_3ilVynUANup2WapVTO4S7Nkf63y71WpdovgBNQ29OJoyQ/viewform?usp=dialog",
+    jobSeekerForm: "https://docs.google.com/forms/d/e/1FAIpQLSd9_3ilVynUANup2WapVTO4S7Nkf63y71WpdovgBNQ29OJoyQ/viewform?usp=dialog",
+
+    // 2. Recruiter / Client / Corporate Hiring Requirement Form
     recruiterForm: "https://forms.gle/MqWFMjhGvyzSKWsU6",
-    clientForm: "https://docs.google.com/forms/d/e/1FAIpQLSd9_3ilVynUANup2WapVTO4S7Nkf63y71WpdovgBNQ29OJoyQ/viewform?usp=dialog",
+    clientForm: "https://forms.gle/MqWFMjhGvyzSKWsU6",
+    employerForm: "https://forms.gle/MqWFMjhGvyzSKWsU6",
   },
 
   // Highlight stats

@@ -28,7 +28,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF2D6] text-slate-800 flex flex-col font-sans selection:bg-[#C9A227] selection:text-white pb-14 md:pb-0">
+    <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-[#C9A227] selection:text-white pb-14 md:pb-0">
       
       {/* 1. Slim Clean Navbar */}
       <Navbar />

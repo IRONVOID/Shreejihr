@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
   );
 
   return (
-    <section id="why-us" className="py-16 lg:py-24 bg-[#F4E7BD] border-b border-[#DFBF74]">
+    <section id="why-us" className="py-16 lg:py-24 bg-slate-50/70 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -82,7 +82,7 @@ export default function WhyChooseUs() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search 20 points..."
-              className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-white border border-[#DFBF74] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#0B1F3F] shadow-xs"
+              className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#0B1F3F] shadow-xs"
             />
           </div>
         </div>
@@ -96,14 +96,14 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={item.id}
-                className="bg-white rounded-lg p-4 sm:p-5 border border-[#DFBF74] hover:border-[#C9A227] transition-colors flex items-start gap-3.5 shadow-xs"
+                className="bg-white rounded-lg p-4 sm:p-5 border border-slate-200 hover:border-[#C9A227] transition-colors flex items-start gap-3.5 shadow-xs"
               >
                 {/* Number & Flat Icon */}
                 <div className="flex-shrink-0 flex items-center gap-2">
                   <span className="text-xs font-mono font-bold text-slate-400">
                     {formattedNumber}.
                   </span>
-                  <div className="w-8 h-8 rounded bg-[#FAF2D6] border border-[#DFBF74] text-[#0B1F3F] flex items-center justify-center">
+                  <div className="w-8 h-8 rounded bg-slate-100 border border-slate-200 text-[#0B1F3F] flex items-center justify-center">
                     <IconComp className="w-4 h-4 text-[#0B1F3F]" />
                   </div>
                 </div>
@@ -123,7 +123,7 @@ export default function WhyChooseUs() {
         </div>
 
         {filteredPoints.length === 0 && (
-          <div className="text-center py-8 bg-white rounded-lg border border-[#DFBF74]">
+          <div className="text-center py-8 bg-white rounded-lg border border-slate-200">
             <p className="text-xs text-slate-500">No advantages matched "{searchTerm}".</p>
             <button onClick={() => setSearchTerm('')} className="mt-1 text-xs font-bold text-[#0B1F3F] underline">
               Reset search

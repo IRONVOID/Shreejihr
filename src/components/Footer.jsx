@@ -116,9 +116,9 @@ export default function Footer() {
                   href={SITE_CONFIG.socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn Profile"
+                  aria-label="Shruti Thakur on LinkedIn"
                   className="w-8 h-8 rounded bg-navy-800 text-slate-300 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors"
-                  title="LinkedIn"
+                  title="Shruti Thakur (Founder) on LinkedIn"
                 >
                   <LinkedInIcon className="w-4 h-4" />
                 </a>
@@ -171,10 +171,10 @@ export default function Footer() {
 
                 {/* Phone */}
                 <a
-                  href={`tel:${SITE_CONFIG.primaryPhoneRaw}`}
-                  aria-label="Call Business"
+                  href={`tel:${SITE_CONFIG.khushiPhoneRaw}`}
+                  aria-label={`Call Khushi Tanwar (${SITE_CONFIG.khushiPhone})`}
                   className="w-8 h-8 rounded bg-navy-800 text-slate-300 hover:bg-[#C9A227] hover:text-[#0B1F3F] flex items-center justify-center transition-colors"
-                  title="Phone Call"
+                  title={`Call Khushi Tanwar (${SITE_CONFIG.khushiPhone})`}
                 >
                   <Phone className="w-4 h-4" />
                 </a>
@@ -182,7 +182,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Action Links: Brochure, Recruiter Form, Client Form & WhatsApp Channel */}
+            {/* Action Links: Brochure, Client Form & WhatsApp Channel */}
             <div className="pt-2 flex flex-wrap gap-2">
               <a
                 href="/shree-ji-hr-brochure.pdf"
@@ -195,25 +195,25 @@ export default function Footer() {
               </a>
 
               <a
-                href={SITE_CONFIG.forms.recruiterForm}
+                href={SITE_CONFIG.forms.candidateForm}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 text-white font-semibold text-[11px] transition-colors"
               >
                 <FileText className="w-3 h-3 text-[#C9A227]" />
-                <span>Recruiter Form</span>
+                <span>Candidate Form</span>
                 <ExternalLink className="w-2.5 h-2.5 text-slate-400" />
               </a>
 
               <a
-                href={SITE_CONFIG.forms.clientForm}
+                href={SITE_CONFIG.forms.recruiterForm}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 text-white font-semibold text-[11px] transition-colors"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#C9A227]/20 hover:bg-[#C9A227] text-[#C9A227] hover:text-[#0B1F3F] border border-[#C9A227]/40 font-semibold text-[11px] transition-colors"
               >
-                <Building2 className="w-3 h-3 text-[#C9A227]" />
+                <Building2 className="w-3 h-3" />
                 <span>Client Form</span>
-                <ExternalLink className="w-2.5 h-2.5 text-slate-400" />
+                <ExternalLink className="w-2.5 h-2.5 opacity-70" />
               </a>
 
               <a
@@ -292,9 +292,15 @@ export default function Footer() {
                   </a>
                 </div>
               </div>
-              <a href={`mailto:${SITE_CONFIG.email}`} className="block hover:text-white break-all">
-                {SITE_CONFIG.email}
-              </a>
+              <div className="space-y-1 pt-1">
+                <span className="text-[11px] text-slate-400 block">Official Emails:</span>
+                <a href={`mailto:${SITE_CONFIG.email}`} className="block hover:text-white break-all text-xs text-slate-200">
+                  ✉️ {SITE_CONFIG.email}
+                </a>
+                <a href={`mailto:${SITE_CONFIG.secondaryEmail}`} className="block hover:text-white break-all text-xs text-slate-200">
+                  ✉️ {SITE_CONFIG.secondaryEmail}
+                </a>
+              </div>
             </div>
           </div>
 

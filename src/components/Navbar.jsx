@@ -85,17 +85,17 @@ export default function Navbar() {
       </div>
 
       {/* Slim Clean Navbar */}
-      <nav className={`bg-[#FAF2D6]/95 backdrop-blur-md transition-all duration-200 ${
+      <nav className={`bg-white/95 backdrop-blur-md transition-all duration-200 ${
         isScrolled 
-          ? 'shadow-md py-3 border-b border-[#DFBF74]' 
-          : 'py-3.5 border-b border-[#DFBF74]'
+          ? 'shadow-md py-3 border-b border-slate-200' 
+          : 'py-3.5 border-b border-slate-200'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             
             {/* Logo & Name — compact single-line */}
             <a href="#" className="flex items-center gap-2.5 flex-shrink-0">
-              <div className="w-9 h-9 rounded-md border border-[#DFBF74] overflow-hidden bg-white p-0.5 flex-shrink-0 shadow-2xs">
+              <div className="w-9 h-9 rounded-md border border-slate-200 overflow-hidden bg-white p-0.5 flex-shrink-0 shadow-2xs">
                 <img 
                   src="/logo.jpg" 
                   alt="Shree Ji HR Consultancy Logo" 
@@ -118,7 +118,7 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-[12.5px] font-semibold text-slate-800 hover:text-[#0B1F3F] whitespace-nowrap transition-colors"
+                  className="text-[12.5px] font-semibold text-slate-700 hover:text-[#0B1F3F] whitespace-nowrap transition-colors"
                 >
                   {link.name}
                 </a>
@@ -152,16 +152,16 @@ export default function Navbar() {
               <a
                 href="/shree-ji-hr-brochure.pdf"
                 download="Shree-Ji-HR-Consultancy-Brochure.pdf"
-                className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-bold text-[#0B1F3F] bg-white border border-[#DFBF74] rounded-lg hover:bg-[#C9A227] hover:text-white transition-colors whitespace-nowrap"
+                className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-bold text-[#0B1F3F] bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors whitespace-nowrap"
                 title="Download Company Brochure"
               >
-                <Download className="w-3 h-3" />
+                <Download className="w-3 h-3 text-[#C9A227]" />
                 <span>Brochure</span>
               </a>
 
               <a
                 href={`tel:${SITE_CONFIG.khushiPhoneRaw}`}
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-bold text-[#0B1F3F] bg-[#F4E7BD] hover:bg-[#DFBF74] rounded-lg transition-colors border border-[#DFBF74] whitespace-nowrap"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-bold text-[#0B1F3F] bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors border border-slate-200 whitespace-nowrap"
                 title={`Call HR Desk (${SITE_CONFIG.khushiPhone})`}
               >
                 <Phone className="w-3 h-3 text-[#C9A227]" />
@@ -181,7 +181,7 @@ export default function Navbar() {
             <div className="flex lg:hidden items-center gap-2">
               <a
                 href={`tel:${SITE_CONFIG.primaryPhoneRaw}`}
-                className="p-2 rounded-lg bg-[#F4E7BD] text-[#0B1F3F] border border-[#DFBF74] sm:hidden min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="p-2 rounded-lg bg-slate-100 text-[#0B1F3F] border border-slate-200 sm:hidden min-w-[44px] min-h-[44px] flex items-center justify-center"
                 aria-label="Call Now"
               >
                 <Phone className="w-4 h-4 text-[#C9A227]" />
@@ -190,7 +190,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-lg text-slate-700 hover:text-[#0B1F3F] hover:bg-[#F4E7BD] focus:outline-none transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="p-2 rounded-lg text-slate-700 hover:text-[#0B1F3F] hover:bg-slate-100 focus:outline-none transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                 aria-expanded={mobileMenuOpen}
                 aria-label="Toggle navigation menu"
               >
@@ -215,8 +215,8 @@ export default function Navbar() {
               aria-hidden="true"
             />
 
-            <div className="relative z-50 lg:hidden bg-[#FAF2D6] border-t border-[#DFBF74] px-4 pt-3 pb-6 space-y-3 shadow-2xl max-h-[calc(100vh-4.5rem)] overflow-y-auto">
-              <div className="py-2 border-b border-[#DFBF74] flex items-center justify-between">
+            <div className="relative z-50 lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-2xl max-h-[calc(100vh-4.5rem)] overflow-y-auto">
+              <div className="py-2 border-b border-slate-200 flex items-center justify-between">
                 <p className="text-xs text-[#0B1F3F] font-bold uppercase tracking-wider flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-[#C9A227]" />
                   Govt. Recognized MSME
@@ -233,7 +233,7 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-bold text-slate-800 hover:bg-[#F4E7BD] active:bg-[#DFBF74] transition-colors min-h-[44px]"
+                    className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-bold text-slate-800 hover:bg-slate-100 active:bg-slate-200 transition-colors min-h-[44px]"
                   >
                     <span>{link.name}</span>
                     <ArrowRight className="w-4 h-4 text-slate-400" />
@@ -242,7 +242,7 @@ export default function Navbar() {
               </div>
 
               {/* Action Buttons Section */}
-              <div className="pt-3 border-t border-[#DFBF74] space-y-2">
+              <div className="pt-3 border-t border-slate-200 space-y-2">
                 <a
                   href={SITE_CONFIG.socialLinks.whatsappKhushi}
                   target="_blank"
@@ -265,23 +265,23 @@ export default function Navbar() {
                   <span>Join Official WhatsApp Channel 📢</span>
                 </a>
 
-                {/* Recruiter & Client Quick Forms */}
+                {/* Candidate & Recruiter Quick Forms */}
                 <div className="grid grid-cols-2 gap-2 pt-1">
+                  <a
+                    href={SITE_CONFIG.forms.candidateForm}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-[#0B1F3F] text-white font-bold text-xs min-h-[42px] text-center shadow-xs"
+                  >
+                    <span>Candidate Form ↗</span>
+                  </a>
                   <a
                     href={SITE_CONFIG.forms.recruiterForm}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-[#0B1F3F] text-white font-bold text-xs min-h-[42px] text-center"
-                  >
-                    <span>Recruiter Form ↗</span>
-                  </a>
-                  <a
-                    href={SITE_CONFIG.forms.clientForm}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-[#0B1F3F] text-white font-bold text-xs min-h-[42px] text-center"
+                    className="flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl bg-[#C9A227] text-[#0B1F3F] font-bold text-xs min-h-[42px] text-center shadow-xs"
                   >
                     <span>Client Form ↗</span>
                   </a>
@@ -291,7 +291,7 @@ export default function Navbar() {
                 <div className="grid grid-cols-2 gap-2 pt-1">
                   <a
                     href={`tel:${SITE_CONFIG.khushiPhoneRaw}`}
-                    className="flex flex-col items-center justify-center py-2.5 px-2 rounded-xl bg-white text-slate-900 border border-[#DFBF74] min-h-[48px] shadow-xs active:bg-[#FAF2D6]"
+                    className="flex flex-col items-center justify-center py-2.5 px-2 rounded-xl bg-slate-50 text-slate-900 border border-slate-200 min-h-[48px] shadow-xs active:bg-slate-100"
                   >
                     <span className="text-[10px] text-slate-500 font-medium">Khushi (HR Consultant)</span>
                     <span className="text-xs font-extrabold text-[#0B1F3F] flex items-center gap-1">
@@ -300,7 +300,7 @@ export default function Navbar() {
                   </a>
                   <a
                     href={`tel:${SITE_CONFIG.shrutiPhoneRaw}`}
-                    className="flex flex-col items-center justify-center py-2.5 px-2 rounded-xl bg-white text-slate-900 border border-[#DFBF74] min-h-[48px] shadow-xs active:bg-[#FAF2D6]"
+                    className="flex flex-col items-center justify-center py-2.5 px-2 rounded-xl bg-slate-50 text-slate-900 border border-slate-200 min-h-[48px] shadow-xs active:bg-slate-100"
                   >
                     <span className="text-[10px] text-slate-500 font-medium">Shruti (Founder)</span>
                     <span className="text-xs font-extrabold text-[#0B1F3F] flex items-center gap-1">
@@ -313,7 +313,7 @@ export default function Navbar() {
                 <a
                   href="/shree-ji-hr-brochure.pdf"
                   download="Shree-Ji-HR-Consultancy-Brochure.pdf"
-                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-white border border-[#DFBF74] text-[#0B1F3F] font-bold text-xs min-h-[42px]"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-white border border-slate-200 text-[#0B1F3F] font-bold text-xs min-h-[42px]"
                 >
                   <Download className="w-3.5 h-3.5 text-[#C9A227]" />
                   <span>Download Company Brochure (PDF)</span>
