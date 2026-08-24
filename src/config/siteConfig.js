@@ -16,15 +16,15 @@ export const SITE_CONFIG = {
   govtRegistrationText: "Officially registered under Ministry of MSME, Govt. of India",
 
   // Contact Number (Khushi Tanwar - Direct HR Desk)
-  primaryPhone: "+91 9690423313", // Khushi Tanwar (HR Consultant / Co-Founder - Direct Contact)
-  secondaryPhone: "+91 9690423313", // Active HR Helpline
-  primaryPhoneRaw: "9690423313",
-  secondaryPhoneRaw: "9690423313",
+  primaryPhone: "+91 9520105502", // Khushi Tanwar (HR Consultant / Co-Founder - Direct Contact)
+  secondaryPhone: "+91 9520105502", // Active HR Helpline
+  primaryPhoneRaw: "9520105502",
+  secondaryPhoneRaw: "9520105502",
 
-  khushiPhone: "+91 9690423313",
-  khushiPhoneRaw: "9690423313",
-  shrutiPhone: "+91 9690423313",
-  shrutiPhoneRaw: "9690423313",
+  khushiPhone: "+91 9520105502",
+  khushiPhoneRaw: "9520105502",
+  shrutiPhone: "+91 9520105502",
+  shrutiPhoneRaw: "9520105502",
 
   // Email Address
   email: "shreejihrconsultancy1@gmail.com",
